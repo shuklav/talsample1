@@ -1,0 +1,33 @@
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\bin\Debug\talsample1.exe.config
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\bin\Debug\talsample1.exe
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\bin\Debug\talsample1.pdb
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.csprojResolveAssemblyReference.cache
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.loginPage.resources
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.Properties.Resources.resources
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.csproj.GenerateResource.Cache
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.exe
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.pdb
+c:\users\vs\documents\visual studio 2013\Projects\talsample1\talsample1\obj\Debug\talsample1.masterUIpage.resources
+D:\Visual Studio Projects March 2016\talsample1\talsample1\bin\Debug\talsample1.exe.config
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.exe
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.pdb
+D:\Visual Studio Projects March 2016\talsample1\talsample1\bin\Debug\talsample1.exe
+D:\Visual Studio Projects March 2016\talsample1\talsample1\bin\Debug\talsample1.pdb
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.loginPage.resources
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.masterUIpage.resources
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.Properties.Resources.resources
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.ReceiverView.resources
+D:\Visual Studio Projects March 2016\talsample1\talsample1\obj\Debug\talsample1.csproj.GenerateResource.Cache
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\bin\Debug\talsample1.exe.config
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.exe
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.pdb
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\bin\Debug\talsample1.exe
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\bin\Debug\talsample1.pdb
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.csprojResolveAssemblyReference.cache
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.loginPage.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.masterUIpage.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.Properties.Resources.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.purchaseOrderForm.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.ReceiverView.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsample1\talsample1\obj\Debug\talsample1.csproj.GenerateResource.Cache
