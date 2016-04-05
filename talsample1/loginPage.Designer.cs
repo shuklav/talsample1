@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtbusername = new System.Windows.Forms.TextBox();
-            this.txtbpassword = new System.Windows.Forms.TextBox();
+            this.txtusername = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
             this.btnlogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,23 +61,23 @@
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtbusername
+            // txtusername
             // 
-            this.txtbusername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbusername.Location = new System.Drawing.Point(277, 92);
-            this.txtbusername.Multiline = true;
-            this.txtbusername.Name = "txtbusername";
-            this.txtbusername.Size = new System.Drawing.Size(174, 26);
-            this.txtbusername.TabIndex = 2;
+            this.txtusername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtusername.Location = new System.Drawing.Point(277, 92);
+            this.txtusername.Multiline = true;
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(174, 26);
+            this.txtusername.TabIndex = 2;
             // 
-            // txtbpassword
+            // txtpassword
             // 
-            this.txtbpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbpassword.Location = new System.Drawing.Point(277, 140);
-            this.txtbpassword.Multiline = true;
-            this.txtbpassword.Name = "txtbpassword";
-            this.txtbpassword.Size = new System.Drawing.Size(174, 26);
-            this.txtbpassword.TabIndex = 3;
+            this.txtpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpassword.Location = new System.Drawing.Point(277, 140);
+            this.txtpassword.Multiline = true;
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.Size = new System.Drawing.Size(174, 26);
+            this.txtpassword.TabIndex = 3;
             // 
             // btnlogin
             // 
@@ -98,8 +98,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(662, 388);
             this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.txtbpassword);
-            this.Controls.Add(this.txtbusername);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -115,8 +115,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtbusername;
-        private System.Windows.Forms.TextBox txtbpassword;
+        private System.Windows.Forms.TextBox txtusername;
+        private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Button btnlogin;
     }
 }
