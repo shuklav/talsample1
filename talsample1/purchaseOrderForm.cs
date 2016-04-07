@@ -12,9 +12,11 @@ namespace talsample1
 {
     public partial class purchaseOrderForm : Form
     {
+        String conn = "server=localhost;user id=tal;password=taldepo;database=tal_v4;persistsecurityinfo=True;logging=True";
         public purchaseOrderForm()
         {
             InitializeComponent();
+            //lblrole.Text = role;
         }
 
         private void purchaseOrderForm_Load(object sender, EventArgs e)

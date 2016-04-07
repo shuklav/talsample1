@@ -15,10 +15,12 @@ namespace talsample1
 {
     public partial class loginPage : Form
     {
-        String constr = "server=localhost;port=3306;user id=tal;database=tal_v4;persistsecurityinfo=True";
+        String constr = "server=localhost;user id=tal;password=taldepo;database=tal_v4;persistsecurityinfo=True;logging=True";
         public loginPage()
         {
             InitializeComponent();
+            txtpassword.PasswordChar = '$';
+            txtpassword.MaxLength = 10;
         }
 
         private void loginPage_Load(object sender, EventArgs e)
@@ -30,20 +32,55 @@ namespace talsample1
         {
             try
             {
-                MySqlConnection conn = new MySqlConnection(constr);
-                MySqlCommand sqlcmdchklogin = new MySqlCommand("select * from login where username = '" + txtusername.Text + "' and password='" + txtpassword.Text + "' ;", conn);
-                MySqlDataReader loginDataReader;
-                conn.Open();
-                loginDataReader=sqlcmdchklogin.ExecuteReader();
-                int count=0;
-                while(loginDataReader.Read()){//if the entered username and pswd match then cont will go up by only 1
-                    //this would mean that the details are correct.
-                    count+=1;
-                    }
-                if(count==1){//if details were correct, then depending on who logs in, open a form
-                    
-    
+                purchaseOrderForm pof = new purchaseOrderForm();
+                masterUIpage mup = new masterUIpage();
+                ReceiverView rv = new ReceiverView();
+                
+                MySqlConnection loginconn = new MySqlConnection(constr);
+                MySqlDataAdapter loginadapter = new MySqlDataAdapter("select role from login where username = '" + txtusername.Text + "' and password='" + txtpassword.Text + "' ;", loginconn);
+                DataTable logindatatable = new DataTable();
+                loginadapter.Fill(logindatatable);
+
+                if (logindatatable.Rows.Count == 1)
+                {
+                    if (logindatatable.Rows[0][0].ToString() == "admin") { this.Hide(); pof.Show(); }
+                    else if (logindatatable.Rows[0][0].ToString() == "manager") { this.Hide(); mup.Show(); }
+                    else if (logindatatable.Rows[0][0].ToString() == "receiver") { this.Hide(); rv.Show(); }
+                    //else if(logindatatable.Rows[0][0].ToString()=="picker"){this.Hide(); pv.Show();}
+                    //else if(logindatatable.Rows[0][0].ToString()=="packer"){this.Hide(); pkv.Show();}
+                    else { MessageBox.Show("Login details are incorrect, Please check your details"); }
+
+                    //if(logindatatable.Rows[0][0].ToString()=="admin"){
+                    //purchaseOrderForm pof = new purchaseOrderForm(logindatatable.Rows[0][0].ToString());
+                    //this.Hide();
+                    //pof.Show();
+                    //}
+
+                    //pof.Controls["lblrole"].Text=logindatatable.Rows[0][0].ToString();
                 }
+
+
+
+                
+                
+                //MySqlConnection conn = new MySqlConnection(constr); 
+                //conn.Open();
+                //MySqlCommand sqlcmdchklogin = new MySqlCommand("select role from login where username = '" + txtusername.Text + "' and password='" + txtpassword.Text + "' ;", conn);
+                //MySqlDataReader loginDataReader;
+                
+                //loginDataReader=sqlcmdchklogin.ExecuteReader();
+                //int count=0;
+                //while(loginDataReader.Read()){//if the entered username and pswd match then cont will go up by only 1
+                //    //this would mean that the details are correct.
+                //    count+=1;
+                //    }
+                //Console.WriteLine(loginDataReader.Read());
+                //if(count==1){//if details were correct, then depending on who logs in, open a form
+                //    loginDataReader.Read();
+                //    loginDataReader.ToString();
+                //    if (loginDataReader.Equals("admin")) { this.Hide(); pof.Show(); }
+    
+                //}
 
                 //MySqlDataAdapter loginDataAdapter = new MySqlDataAdapter();
                 //loginDataAdapter.SelectCommand = new MySqlCommand("select * from login where username = '" +txtusername.Text+ "' and password='" +txtpassword.Text+ "' ;",conn);

@@ -16,7 +16,7 @@ namespace talsample1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new purchaseOrderForm());
+            Application.Run(new loginPage());
         }
     }
 }
