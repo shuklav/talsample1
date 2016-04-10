@@ -44,3 +44,16 @@ C:\Users\Vishaal\Desktop\talsample1\talsample1\obj\Debug\talsample1.Properties.R
 C:\Users\Vishaal\Desktop\talsample1\talsample1\obj\Debug\talsample1.purchaseOrderForm.resources
 C:\Users\Vishaal\Desktop\talsample1\talsample1\obj\Debug\talsample1.ReceiverView.resources
 C:\Users\Vishaal\Desktop\talsample1\talsample1\obj\Debug\talsample1.csproj.GenerateResource.Cache
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\bin\Debug\talsample1.exe.config
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.exe
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.pdb
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\bin\Debug\talsample1.exe
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\bin\Debug\talsample1.pdb
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.csprojResolveAssemblyReference.cache
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.addSupplier.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.loginPage.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.masterUIpage.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.Properties.Resources.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.purchaseOrderForm.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.ReceiverView.resources
+C:\Users\Vishaal\Desktop\VishaalGIT\talsampleVS\talsample1\obj\Debug\talsample1.csproj.GenerateResource.Cache

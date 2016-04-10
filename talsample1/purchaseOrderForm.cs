@@ -51,6 +51,20 @@ namespace talsample1
             
         }
 
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.suppliersTableAdapter.FillBy1(this.tal_v4dsSupplierDetails.suppliers);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+       
         
     }
 }

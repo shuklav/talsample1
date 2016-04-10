@@ -281,11 +281,17 @@ namespace talsample1 {
             
             private global::System.Data.DataColumn columnsupplier_name;
             
-            private global::System.Data.DataColumn columnsupplier_addr;
-            
             private global::System.Data.DataColumn columnsupplier_phone;
             
             private global::System.Data.DataColumn columnsupplier_email;
+            
+            private global::System.Data.DataColumn columnsupplier_street;
+            
+            private global::System.Data.DataColumn columnsupplier_city;
+            
+            private global::System.Data.DataColumn columnsupplier_state;
+            
+            private global::System.Data.DataColumn columnsupplier_zip;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -330,14 +336,6 @@ namespace talsample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn supplier_addrColumn {
-                get {
-                    return this.columnsupplier_addr;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn supplier_phoneColumn {
                 get {
                     return this.columnsupplier_phone;
@@ -349,6 +347,38 @@ namespace talsample1 {
             public global::System.Data.DataColumn supplier_emailColumn {
                 get {
                     return this.columnsupplier_email;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn supplier_streetColumn {
+                get {
+                    return this.columnsupplier_street;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn supplier_cityColumn {
+                get {
+                    return this.columnsupplier_city;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn supplier_stateColumn {
+                get {
+                    return this.columnsupplier_state;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn supplier_zipColumn {
+                get {
+                    return this.columnsupplier_zip;
                 }
             }
             
@@ -389,13 +419,16 @@ namespace talsample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suppliersRow AddsuppliersRow(string supplier_name, string supplier_addr, string supplier_phone, string supplier_email) {
+            public suppliersRow AddsuppliersRow(string supplier_name, string supplier_phone, string supplier_email, string supplier_street, string supplier_city, string supplier_state, int supplier_zip) {
                 suppliersRow rowsuppliersRow = ((suppliersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         supplier_name,
-                        supplier_addr,
                         supplier_phone,
-                        supplier_email};
+                        supplier_email,
+                        supplier_street,
+                        supplier_city,
+                        supplier_state,
+                        supplier_zip};
                 rowsuppliersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsuppliersRow);
                 return rowsuppliersRow;
@@ -426,9 +459,12 @@ namespace talsample1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnsupplier_name = base.Columns["supplier_name"];
-                this.columnsupplier_addr = base.Columns["supplier_addr"];
                 this.columnsupplier_phone = base.Columns["supplier_phone"];
                 this.columnsupplier_email = base.Columns["supplier_email"];
+                this.columnsupplier_street = base.Columns["supplier_street"];
+                this.columnsupplier_city = base.Columns["supplier_city"];
+                this.columnsupplier_state = base.Columns["supplier_state"];
+                this.columnsupplier_zip = base.Columns["supplier_zip"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -436,23 +472,34 @@ namespace talsample1 {
             private void InitClass() {
                 this.columnsupplier_name = new global::System.Data.DataColumn("supplier_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsupplier_name);
-                this.columnsupplier_addr = new global::System.Data.DataColumn("supplier_addr", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsupplier_addr);
                 this.columnsupplier_phone = new global::System.Data.DataColumn("supplier_phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsupplier_phone);
                 this.columnsupplier_email = new global::System.Data.DataColumn("supplier_email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsupplier_email);
+                this.columnsupplier_street = new global::System.Data.DataColumn("supplier_street", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsupplier_street);
+                this.columnsupplier_city = new global::System.Data.DataColumn("supplier_city", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsupplier_city);
+                this.columnsupplier_state = new global::System.Data.DataColumn("supplier_state", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsupplier_state);
+                this.columnsupplier_zip = new global::System.Data.DataColumn("supplier_zip", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsupplier_zip);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnsupplier_name}, true));
                 this.columnsupplier_name.AllowDBNull = false;
                 this.columnsupplier_name.Unique = true;
                 this.columnsupplier_name.MaxLength = 50;
-                this.columnsupplier_addr.AllowDBNull = false;
-                this.columnsupplier_addr.MaxLength = 200;
                 this.columnsupplier_phone.AllowDBNull = false;
                 this.columnsupplier_phone.MaxLength = 20;
                 this.columnsupplier_email.AllowDBNull = false;
                 this.columnsupplier_email.MaxLength = 100;
+                this.columnsupplier_street.AllowDBNull = false;
+                this.columnsupplier_street.MaxLength = 200;
+                this.columnsupplier_city.AllowDBNull = false;
+                this.columnsupplier_city.MaxLength = 45;
+                this.columnsupplier_state.AllowDBNull = false;
+                this.columnsupplier_state.MaxLength = 5;
+                this.columnsupplier_zip.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -606,17 +653,6 @@ namespace talsample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string supplier_addr {
-                get {
-                    return ((string)(this[this.tablesuppliers.supplier_addrColumn]));
-                }
-                set {
-                    this[this.tablesuppliers.supplier_addrColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string supplier_phone {
                 get {
                     return ((string)(this[this.tablesuppliers.supplier_phoneColumn]));
@@ -634,6 +670,50 @@ namespace talsample1 {
                 }
                 set {
                     this[this.tablesuppliers.supplier_emailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string supplier_street {
+                get {
+                    return ((string)(this[this.tablesuppliers.supplier_streetColumn]));
+                }
+                set {
+                    this[this.tablesuppliers.supplier_streetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string supplier_city {
+                get {
+                    return ((string)(this[this.tablesuppliers.supplier_cityColumn]));
+                }
+                set {
+                    this[this.tablesuppliers.supplier_cityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string supplier_state {
+                get {
+                    return ((string)(this[this.tablesuppliers.supplier_stateColumn]));
+                }
+                set {
+                    this[this.tablesuppliers.supplier_stateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int supplier_zip {
+                get {
+                    return ((int)(this[this.tablesuppliers.supplier_zipColumn]));
+                }
+                set {
+                    this[this.tablesuppliers.supplier_zipColumn] = value;
                 }
             }
         }
@@ -798,14 +878,18 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "suppliers";
             tableMapping.ColumnMappings.Add("supplier_name", "supplier_name");
-            tableMapping.ColumnMappings.Add("supplier_addr", "supplier_addr");
             tableMapping.ColumnMappings.Add("supplier_phone", "supplier_phone");
             tableMapping.ColumnMappings.Add("supplier_email", "supplier_email");
+            tableMapping.ColumnMappings.Add("supplier_street", "supplier_street");
+            tableMapping.ColumnMappings.Add("supplier_city", "supplier_city");
+            tableMapping.ColumnMappings.Add("supplier_state", "supplier_state");
+            tableMapping.ColumnMappings.Add("supplier_zip", "supplier_zip");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `suppliers` WHERE ((`supplier_name` = @p1) AND (`supplier_addr` = @p2" +
-                ") AND (`supplier_phone` = @p3) AND (`supplier_email` = @p4))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `suppliers` WHERE ((`supplier_name` = @p1) AND (`supplier_street` = @" +
+                "p2) AND (`supplier_city` = @p3) AND (`supplier_state` = @p4) AND (`supplier_zip`" +
+                " = @p5) AND (`supplier_phone` = @p6) AND (`supplier_email` = @p7))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -820,11 +904,35 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "supplier_addr";
+            param.SourceColumn = "supplier_street";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_city";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p4";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_state";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_zip";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.StringFixedLength;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
             param.IsNullable = true;
@@ -832,7 +940,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
+            param.ParameterName = "@p7";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -841,8 +949,9 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `suppliers` (`supplier_name`, `supplier_addr`, `supplier_phone`, `sup" +
-                "plier_email`) VALUES (@p1, @p2, @p3, @p4)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `suppliers` (`supplier_name`, `supplier_street`, `supplier_city`, `su" +
+                "pplier_state`, `supplier_zip`, `supplier_phone`, `supplier_email`) VALUES (@p1, " +
+                "@p2, @p3, @p4, @p5, @p6, @p7)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -856,17 +965,38 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "supplier_addr";
+            param.SourceColumn = "supplier_street";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_city";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p4";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_state";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_zip";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.StringFixedLength;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
             param.IsNullable = true;
             param.SourceColumn = "supplier_phone";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
+            param.ParameterName = "@p7";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -874,9 +1004,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `suppliers` SET `supplier_name` = @p1, `supplier_addr` = @p2, `supplier_ph" +
-                "one` = @p3, `supplier_email` = @p4 WHERE ((`supplier_name` = @p5) AND (`supplier" +
-                "_addr` = @p6) AND (`supplier_phone` = @p7) AND (`supplier_email` = @p8))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `suppliers` SET `supplier_name` = @p1, `supplier_street` = @p2, `supplier_city` = @p3, `supplier_state` = @p4, `supplier_zip` = @p5, `supplier_phone` = @p6, `supplier_email` = @p7 WHERE ((`supplier_name` = @p8) AND (`supplier_street` = @p9) AND (`supplier_city` = @p10) AND (`supplier_state` = @p11) AND (`supplier_zip` = @p12) AND (`supplier_phone` = @p13) AND (`supplier_email` = @p14))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -890,24 +1018,45 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "supplier_addr";
+            param.SourceColumn = "supplier_street";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.StringFixedLength;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "supplier_phone";
+            param.SourceColumn = "supplier_city";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "supplier_email";
+            param.SourceColumn = "supplier_state";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_zip";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p6";
+            param.DbType = global::System.Data.DbType.StringFixedLength;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_phone";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p7";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_email";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p8";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -915,15 +1064,39 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p6";
+            param.ParameterName = "@p9";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "supplier_addr";
+            param.SourceColumn = "supplier_street";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p7";
+            param.ParameterName = "@p10";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_city";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p11";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_state";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p12";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "supplier_zip";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p13";
             param.DbType = global::System.Data.DbType.StringFixedLength;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
             param.IsNullable = true;
@@ -931,7 +1104,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p8";
+            param.ParameterName = "@p14";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -950,17 +1123,32 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[5];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `supplier_name`, `supplier_addr`, `supplier_phone`, `supplier_email` FROM " +
-                "`suppliers`";
+            this._commandCollection[0].CommandText = "SELECT `supplier_name`, `supplier_street`,`supplier_city`,`supplier_state`,`suppl" +
+                "ier_zip`, `supplier_phone`, `supplier_email` FROM `suppliers`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT `supplier_name`, `supplier_addr`, `supplier_phone`, `supplier_email` FROM " +
-                "`suppliers`";
+            this._commandCollection[1].CommandText = "SELECT supplier_city, supplier_email, supplier_name, supplier_phone, supplier_sta" +
+                "te, supplier_street, supplier_zip FROM suppliers";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT `supplier_name`, `supplier_street`,`supplier_city`,`supplier_state`,`suppl" +
+                "ier_zip`, `supplier_phone`, `supplier_email` FROM `suppliers`";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT supplier_name, supplier_street, supplier_city, supplier_state, supplier_zi" +
+                "p, supplier_phone, supplier_email\r\nFROM     suppliers";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT `supplier_name`, `supplier_street`,`supplier_city`,`supplier_state`,`suppl" +
+                "ier_zip`, `supplier_phone`, `supplier_email` FROM `suppliers`";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1003,6 +1191,45 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(tal_v4dsSupplierDetails.suppliersDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy2(tal_v4dsSupplierDetails.suppliersDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy3(tal_v4dsSupplierDetails.suppliersDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(tal_v4dsSupplierDetails.suppliersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -1033,7 +1260,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string p1, string p2, string p3, string p4) {
+        public virtual int Delete(string p1, string p2, string p3, string p4, int p5, string p6, string p7) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
@@ -1058,6 +1285,19 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(p4));
             }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(p5));
+            if ((p6 == null)) {
+                throw new global::System.ArgumentNullException("p6");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(p6));
+            }
+            if ((p7 == null)) {
+                throw new global::System.ArgumentNullException("p7");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p7));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1078,7 +1318,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, string p2, string p3, string p4) {
+        public virtual int Insert(string p1, string p2, string p3, string p4, int p5, string p6, string p7) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
@@ -1103,6 +1343,19 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
             }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(p5));
+            if ((p6 == null)) {
+                throw new global::System.ArgumentNullException("p6");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(p6));
+            }
+            if ((p7 == null)) {
+                throw new global::System.ArgumentNullException("p7");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(p7));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1123,7 +1376,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, string p2, string p3, string p4, string p5, string p6, string p7, string p8) {
+        public virtual int Update(string p1, string p2, string p3, string p4, int p5, string p6, string p7, string p8, string p9, string p10, string p11, int p12, string p13, string p14) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
@@ -1148,12 +1401,7 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
             }
-            if ((p5 == null)) {
-                throw new global::System.ArgumentNullException("p5");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(p5));
             if ((p6 == null)) {
                 throw new global::System.ArgumentNullException("p6");
             }
@@ -1171,6 +1419,37 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p8));
+            }
+            if ((p9 == null)) {
+                throw new global::System.ArgumentNullException("p9");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(p9));
+            }
+            if ((p10 == null)) {
+                throw new global::System.ArgumentNullException("p10");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p10));
+            }
+            if ((p11 == null)) {
+                throw new global::System.ArgumentNullException("p11");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(p11));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(p12));
+            if ((p13 == null)) {
+                throw new global::System.ArgumentNullException("p13");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(p13));
+            }
+            if ((p14 == null)) {
+                throw new global::System.ArgumentNullException("p14");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(p14));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1192,8 +1471,8 @@ namespace talsample1.tal_v4dsSupplierDetailsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p2, string p3, string p4, string p5, string p6, string p7, string p8) {
-            return this.Update(p5, p2, p3, p4, p5, p6, p7, p8);
+        public virtual int Update(string p2, string p3, string p4, int p5, string p6, string p7, string p8, string p9, string p10, string p11, int p12, string p13, string p14) {
+            return this.Update(p8, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14);
         }
     }
     
